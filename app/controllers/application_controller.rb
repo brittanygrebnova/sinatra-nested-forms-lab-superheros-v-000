@@ -11,7 +11,7 @@ class App < Sinatra::Base
     post '/teams' do
       @team_name = params[:team][:name]
       @team_motto = params[:team][:motto]
-      @hero_name1 = params[]
+      @hero_name1 = params["team"]["members"][0]["name"]
       erb :team
     end
 
